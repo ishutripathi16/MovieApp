@@ -1,0 +1,18 @@
+<!-- <div class="container-fluid" style="text-align:center">
+	<h1 class="jumbotron">
+		Welcome to Home Of Movies!
+	</h1>
+	<input [(ngModel)]="temp"/>
+	<button type="button" class="btn btn-info btn-md" (click)=show()>SEARCH</button>
+	<button type="button" class="btn btn-info btn-md" routerLink="/favourites" (click)=display()>FAVOURITES</button> -->
+<!-- 	<button routerLink='Upcoming' type="button" class="btn btn-primary btn-sm (click)=popularshow()">Upcoming Movies</button>
+-->
+<!-- </div> -->
+<section>
+  <div class="container-fluid">
+    <app-movie-search (event)='setdata($event)'></app-movie-search>
+    <!-- <app-movie-list [state] = 'data'></app-movie-list> -->
+  </div>
+<!-- 
+  <app-popular-movie></app-popular-movie> -->
+</section>

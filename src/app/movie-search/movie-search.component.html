@@ -1,0 +1,28 @@
+ <!-- 
+<section>
+  <div class="container-fluid">
+    <app-movie-search (event)='setdata($event)'></app-movie-search>
+    <app-movie-list [state] = 'data'></app-movie-list>
+  </div>
+</section>-->
+<div class="container-fluid" style="text-align:center">
+	<div class="jumbotron">
+	<h1>Search Your Movie</h1>
+	<input [(ngModel)]="temp"/>
+	<button type="button" class="btn btn-default btn-sm" (click)=show()>SEARCH</button>
+	<div>
+
+	<!-- <a class="btn btn-info btn-md" routerLink="/favourites">FAVOURITES</a>
+	<router-outlet></router-outlet> -->
+	<!-- <button type="button" --><!-- </button> -->
+<!-- 	<button routerLink='Upcoming' type="button" class="btn btn-primary btn-sm (click)=popularshow()">Upcoming Movies</button>
+-->
+</div>
+<!-- <router-outlet></router-outlet> -->
+<div class="row">
+	<div class="container-fluid col-md-3 col-md-3 col-md-3 col-md-3" *ngFor = "let display of first.results | paginate: { itemsPerPage: 10, currentPage: p}">
+	<app-movie-list *ngIf="display" [display]="display" ></app-movie-list>
+	</div>
+</div>
+<!-- <app-favourites></app-favourites> -->
+<pagination-controls style="text-align:center" auto-hide="true" (pageChange)="p =$event"></pagination-controls>

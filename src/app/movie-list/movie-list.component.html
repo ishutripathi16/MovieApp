@@ -1,0 +1,78 @@
+ <div class="card hovercard">
+ 	<div class="cardheader">
+ 		<div *ngIf="display.poster_path !=null; else default">
+ 			<img src="https://image.tmdb.org/t/p/w300/{{display.poster_path}}" class="img-thumbnail img-responsive adjust"></div>
+ 			<ng-template #default>
+ 				<img src="./assets/images.jpg" class="img-thumbnail adjust"></ng-template>
+ 			</div>
+
+ 			<div class="info">
+ 				<div class="title">
+ 					<h4>{{display.title}}</h4>
+ 				</div>
+ 				<div class="desc"><h4>Release Date : {{display.release_date}}</h4></div>
+ 			</div>
+ 			<div class="bottom">
+ 				<button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal" (click)="addFav(display)">Add To Favourites</button>
+
+ 				<!-- Modal -->
+ 				<div id="myModal" class="modal fade" role="dialog">
+ 					<div class="modal-dialog">
+
+ 						<!-- Modal content-->
+ 						<div class="modal-content">
+ 							<div class="modal-header">
+ 								<button type="button" class="close" data-dismiss="modal">&times;</button>
+ 							</div>
+ 							<div class="modal-body">
+ 								<h5><p class="font-italic">Added in Your FAVOURITES</p></h5>
+ 							</div>
+ 							<div class="modal-footer">
+ 							<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+ 							</div>
+ 						</div>
+
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+
+
+<!-- 	<section>
+		<div class="container">
+			<div class="row">
+					<div *ngIf="display.poster_path !=null; else default">
+						<div class="card card-01">
+							<img class="card-img-top" src="https://image.tmdb.org/t/p/w300/{{display.poster_path}}">
+							<div class="card-body">
+								<span class="badge-box"><i class="fa fa-check"></i></span>
+								<h4 class="card-title">{{display.title}}</h4>
+								<p class="card-text">Release Date : {{display.release_date}}</p>
+								<button type="button" class="btn btn-default text-uppercase" (click)="addFav(display)">Add To Favourites</button>
+							</div>
+						</div>
+					</div>
+			</div>
+			</div>
+			</section>
+		-->
+<!-- 
+		<h4>Movie Id:
+			<div>
+				{{display.id}}
+			</div>
+		</h4>
+		<br>
+		<h3>
+			<div>{{display.title}}</div>
+		</h3>
+		<div *ngIf="display.poster_path !=null; else default">
+			<img src="https://image.tmdb.org/t/p/w300/{{display.poster_path}}" class="img-thumbnail img-responsive img-fluid img"></div>
+			<ng-template #default>
+				<img src="./assets/images.jpg" class="img-thumbnail img-fluid img"></ng-template>
+				<label>
+					<h4>Release Date : {{display.release_date}}</h4>
+				</label>
+				<br>
+				<button type="button" class="btn btn-danger btn-md" (click)="addFav(display)">Add To Favourites</button>
+				<hr> -->
